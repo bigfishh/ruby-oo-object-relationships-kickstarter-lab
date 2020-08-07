@@ -31,6 +31,16 @@ back many projects. Neither can _belong to_ just one of the other.
 However, if we introduce a third class in-between Project and Backer, we can
 establish a _has-many-through_ relationship _in both directions!
 
+Backer -< ProjectBacker >- Project
+
+- ProjectBacker will hold the instances of the other two models 
+ 
+- ProjectBacker belongs_to Backer 
+- ProjectBacker belongs_to Project 
+
+- Backer has_many Project through ProjectBacker 
+- Project has_many Backer through ProjectBacker 
+
 We can call this class ProjectBacker - each instance of ProjectBacker will
 represent an association between a single backer and a single project. A
 ProjectBacker, therefore, belongs to one Backer and one Project. ProjectBacker,
@@ -45,24 +55,24 @@ one another. This is not how you'd normally see specs for multiple objects. For
 the purposes of this lab, though, following the specs in order will eventually
 lead you to the correct relationships between your classes.
 
-- When a `Backer` instance is initialized, it should be initialized with a name.
+<!-- - When a `Backer` instance is initialized, it should be initialized with a name. -->
 
-- When a `Project` instance is initialized, it should be initialized with a title.
+<!-- - When a `Project` instance is initialized, it should be initialized with a title. -->
 
-- When a `ProjectBacker` instance is initialized, it should be initialized with a `Project` instance and a
-`Backer` instance.
-
+<!-- - When a `ProjectBacker` instance is initialized, it should be initialized with a `Project` instance and a
+`Backer` instance. -->
+<!-- 
 - The `ProjectBacker` class is maintaining the relationship. It should have an `@@all` class
 variable. When an instance is initialized, it should be
-stored in this variable.
-
+stored in this variable. -->
+<!-- 
 - The `ProjectBacker` class should also have a class
-method `.all` that returns the `@@all` class variable.
+method `.all` that returns the `@@all` class variable. -->
 
-- Once both classes have their attributes and readers set up, write an instance
+<!-- - Once both classes have their attributes and readers set up, write an instance
   method on the Backer class called `back_project` that takes in a Project
   instance. This method should create a `ProjectBacker` instance using the
-  provided Project instance and the current Backer instance (the instance this method was called on).
+  provided Project instance and the current Backer instance (the instance this method was called on). -->
 
 - Similarly, write a method on the Project class called `add_backer` that takes
   in a Backer instance and creates a `ProjectBacker` using the Backer instance
