@@ -38,8 +38,8 @@ establish a _has-many-through_ relationship _in both directions!
 - `ProjectBacker` belongs_to `Backer` 
 - `ProjectBacker` belongs_to `Project` 
 
-- `Backer` has_many `Project` through `ProjectBacker` 
-- `Project` has_many Backer through `ProjectBacker` 
+- `Backer` has_many `Project`s through `ProjectBacker` 
+- `Project` has_many `Backer`s through `ProjectBacker` 
 
 We can call this class ProjectBacker - each instance of ProjectBacker will
 represent an association between a single backer and a single project. A
